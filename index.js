@@ -14,40 +14,10 @@ async function getData(){
 
         return locationData;
     }
-
     catch(error){
         console.error(error);
     }
 }
 
 
-async function addLocation(){
-    let dataToAdd = await getData();
-    weatherData.push({
-        dataToAdd
-    });
-    console.log(weatherData);
-    updateList();
-}
 
-function updateList(){
-    container.innerHTML='';
-    weatherData.forEach((loc,inx) => {
-        console.log(loc);
-        let toAdd = document.createElement(`div`);
-        toAdd.setAttribute('class','weatherBox');
-        toAdd.innerHTML = `
-            <div class="cityInformation">
-                    <h1>${loc.dataToAdd.location.name}, ${loc.dataToAdd.location.country}</h1>
-                    <small>${loc.dataToAdd.request.type}</small>
-                </div>
-                <h1 class="Temperature">${loc.dataToAdd.current.temperature}°</h1>
-            </div>
-            <div class="bottomSide">
-                <p>${loc.dataToAdd.current.weather_descriptions}</p>
-                <img src="${loc.dataToAdd.current.weather_icons}" alt="cloud-icon">
-            </div>
-        `;
-        container.appendChild(toAdd);
-    });
-}

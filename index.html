@@ -6,14 +6,32 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="form-container">    
-        <label for="inputLocation">Location:</label>
-        <input type="text" id="inputLocation" placeholder="location">
-    </div>
-    <button id="submitButton" onclick="addLocation()">Submit</button>
     <div class="container">
+        <div class=left-side>
+            <div class="search-container">
+                <label for="inputLocation">Where</label>
+                <input type="text" name="searchBar" id="inputLocation" placeholder="Type Here">
+            </div>
+            <div class="icon-city-container">
+                <div class="icon-container">
+                    <img src="" alt="icon">
+                </div>
+                <h1 id="cityName">Manila, Philippines</h1>
+                <p>18:24 - Asia/Manila</p>
+            </div>
+            <div class="information-container">
+                <h2>Slightly Cloudy</h2>
+                <h1 id="temperature">31°</h1>
+            </div>
+        </div>
+    
+        <div class="right-side">
+        </div>
     </div>
     <script src="index.js"></script>
 </body>
