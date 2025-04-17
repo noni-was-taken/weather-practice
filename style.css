@@ -2,6 +2,7 @@
     font-family: 'Manrope',sans-serif;
     margin: 0; 
     font-weight: 200;
+    transition: all 0.3s ease;
 }
 body{
     margin: 0;
@@ -70,7 +71,7 @@ body{
     font-weight: 600;
     margin-top: 19px;
     padding: 4px 11px;
-    text-align: center;
+    text-align: center; 
 }
 .icon-city-container p{
     width: 74%;
